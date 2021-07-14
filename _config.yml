@@ -1,0 +1,11 @@
+theme: jekyll-theme-cayman
+title: Scenario Oriented Object Navigation
+name: Scenario Oriented Object Navigation
+description: An Object Navigation Benchmark for Real-world Scene Understanding
+show_downloads: true
+is_project_page: true
+markdown: kramdown
+github:
+  zip_url: https://drive.google.com/file/d/1tuS3PFHOECwA5U-ofFyv6WZnTXoZjaBr/view?usp=sharing
+  tar_url: https://drive.google.com/file/d/1tuS3PFHOECwA5U-ofFyv6WZnTXoZjaBr/view?usp=sharing
+  repository_url: https://github.com/ZhuFengdaaa/SOON

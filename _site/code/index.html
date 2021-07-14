@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+
+    
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Multi-agent Indoor Navigation | A Real-world Multi-agent Indoor Navigation Benchmark for Cooperative Learning</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Multi-agent Indoor Navigation" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A Real-world Multi-agent Indoor Navigation Benchmark for Cooperative Learning" />
+<meta property="og:description" content="A Real-world Multi-agent Indoor Navigation Benchmark for Cooperative Learning" />
+<link rel="canonical" href="http://localhost:4000/code/" />
+<meta property="og:url" content="http://localhost:4000/code/" />
+<meta property="og:site_name" content="Multi-agent Indoor Navigation" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Multi-agent Indoor Navigation" />
+<script type="application/ld+json">
+{"description":"A Real-world Multi-agent Indoor Navigation Benchmark for Cooperative Learning","@type":"WebPage","headline":"Multi-agent Indoor Navigation","url":"http://localhost:4000/code/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=e85cb4b87abddf45a2b1f95d3818b7842b0a5822">
+  </head>
+  <body>
+    <!-- <a id="skip-to-content" href="#content">Skip to the content.</a> -->
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Multi-agent Indoor Navigation</h1>
+      <h2 class="project-tagline">A Real-world Multi-agent Indoor Navigation Benchmark for Cooperative Learning</h2>
+        <a href="https://github.com/ZhuFengdaaa/MAIN" class="btn">View on GitHub</a>
+        <a href="https://drive.google.com/file/d/1H3fvyPi_OoXJfzV0HzK-Gix5fiizdM4Z/view?usp=sharing" class="btn">Download dataset</a>
+        <!-- <a href="https://main-dataset.github.io/bar.tar" class="btn">Download .tar.gz</a> -->
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <p><img src="/assets/images/overview.jpg" alt="overview" /></p>
+
+<h1 id="main-a-real-world-multi-agent-indoor-navigation-benchmark-for-cooperative-learning">MAIN: A Real-world Multi-agent Indoor Navigation Benchmark for Cooperative Learning</h1>
+
+<p>An implementation of “MAIN: A Real-world Multi-agent Indoor Navigation Benchmark for Cooperative Learning”</p>
+
+<!-- ![](docs/main_visualization.gif) -->
+
+<h2 id="architecture-overview">Architecture Overview</h2>
+
+<p><img src="/assets/framework_v2.jpg" alt="" /></p>
+
+<h2 id="installing-dependencies">Installing dependencies:</h2>
+
+<p>This code is tested on python 3.6.10, pytorch v1.4.0 and CUDA V9.1.85.</p>
+
+<p>Install pytorch from https://pytorch.org/ according to your machine configuration.</p>
+
+<p>This code uses older versions of <a href="https://github.com/facebookresearch/habitat-sim">habitat-sim</a> and <a href="https://github.com/facebookresearch/habitat-lab">habitat-lab</a>. Install them by running the following commands:</p>
+
+<h4 id="installing-habitat-sim">Installing habitat-sim:</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/facebookresearch/habitat-sim.git
+cd habitat-sim 
+git checkout ae6ba1cdc772f7a5dedd31cbf9a5b77f6de3ff0f
+pip install -r requirements.txt; 
+python setup.py install --headless # (for headless machines with GPU)
+python setup.py install # (for machines with display attached)
+</code></pre></div></div>
+
+<h4 id="installing-habitat-lab">Installing habitat-lab:</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone --branch stable https://github.com/facebookresearch/habitat-lab.git
+cd habitat-lab
+git checkout 676e593b953e2f0530f307bc17b6de66cff2e867
+pip install -e .
+</code></pre></div></div>
+
+<!-- We know that roadblocks can come up while installing Habitat, we are here to help! For installation issues in habitat, feel free to raise an issue in this repository, or in the corresponding habitat repository. -->
+
+<h2 id="setup">Setup</h2>
+<p>Clone the repository and install the requirements:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/ZhuFengdaaa/MAIN.git
+cd MAIN
+pip install -r requirements.txt
+</code></pre></div></div>
+
+<h4 id="download-main-dataset">Download MAIN dataset</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir data
+cd data
+mkdir datasets
+cd datasets
+</code></pre></div></div>
+
+<p>download dataset from the link below:</p>
+
+<p><code class="language-plaintext highlighter-rouge">https://drive.google.com/file/d/1H3fvyPi_OoXJfzV0HzK-Gix5fiizdM4Z/view?usp=sharing</code></p>
+
+<p>extract the dataset file:</p>
+
+<p><code class="language-plaintext highlighter-rouge">tar-xf main_data.tar</code></p>
+
+<p>download the oracle occupancy from the link below:</p>
+
+<p>https://drive.google.com/file/d/1vDY3Wuc8jLSeGwnb2GSlGUzECTgkKo9k/view?usp=sharing</p>
+
+<p>extract the oracle map file:</p>
+
+<p><code class="language-plaintext highlighter-rouge">unzip oracle.zip</code></p>
+
+<h4 id="download-matterport3d-scenes">Download Matterport3D scenes</h4>
+
+<p>The Matterport scene dataset and multiON dataset should be placed in <code class="language-plaintext highlighter-rouge">data</code> folder under the root directory (<code class="language-plaintext highlighter-rouge">multiON/</code>) in the following format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MAIN/
+  data/
+    scene_datasets/
+      mp3d/
+        1LXtFkjw3qL/
+          1LXtFkjw3qL.glb
+          1LXtFkjw3qL.navmesh
+          ...
+    datasets/
+      multinav/
+        3_ON/
+          train/
+            ...
+          val/
+            val.json.gz
+        2_ON
+          ...
+        1_ON
+          ...
+</code></pre></div></div>
+
+<p>Download Matterport3D data for Habitat by following the instructions mentioned <a href="https://github.com/facebookresearch/habitat-api#data">here</a>.</p>
+
+<h3 id="training">Training</h3>
+
+<p>For training an OracleEgoMap (<code class="language-plaintext highlighter-rouge">oracle-ego</code>) agent, run this from the root directory:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python habitat_baselines/run.py --exp-config habitat_baselines/config/multinav/ppo_mamonav.yaml --agent-type oracle-ego --run-type train
+</code></pre></div></div>
+<p>For other agent types, the <code class="language-plaintext highlighter-rouge">--agent-type</code> argument would change accordingly.</p>
+
+<h3 id="evaluation">Evaluation</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python habitat_baselines/run.py --exp-config habitat_baselines/config/multinav/ppo_mamonav.yaml --agent-type oracle-ego --run-type eval
+</code></pre></div></div>
+
+<h2 id="citation">Citation</h2>
+<blockquote>
+  <p>Fengda Zhu, Siyi Hu, Yi Zhang, Haodong Hong, Yi Zhu, Xiaojun Chang, Xiaodan Liang, 2021. MAIN: A Multi-agent Indoor Navigation Benchmark for Cooperative Learning</p>
+</blockquote>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>This repository is built upon <a href="https://github.com/facebookresearch/habitat-lab">Habitat Lab</a>, <a href="https://github.com/facebookresearch/habitat-lab">Habitat Sim</a>, <a href="https://github.com/saimwani/multiON">multiON</a>.</p>
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/ZhuFengdaaa/MAIN">main-dataset.github.io</a> is maintained by <a href="https://github.com/main-dataset">main-dataset</a>.</span>
+        
+        <!-- <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span> -->
+      </footer>
+    </main>
+  </body>
+</html>
