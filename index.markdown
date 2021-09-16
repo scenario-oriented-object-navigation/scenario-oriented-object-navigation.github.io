@@ -20,7 +20,7 @@ The ability to navigate like a human towards a language-guided target from anywh
 
 <a id="anchor-name"></a>
 
-The FAO dataset is provided: [train.json](https://drive.google.com/file/d/1tuS3PFHOECwA5U-ofFyv6WZnTXoZjaBr/view?usp=sharing), [val_unseen_instrs.json](https://drive.google.com/file/d/1r6-rkaj02fdVPmFdpTlVrUX9k6WECRNb/view?usp=sharing),[val_unseen_house.json](https://drive.google.com/file/d/1MtALkrfXoXug3hLNim2BUt8_CKcQbPzv/view?usp=sharing)
+The FAO dataset is provided: [train.json](https://drive.google.com/file/d/1tuS3PFHOECwA5U-ofFyv6WZnTXoZjaBr/view?usp=sharing), [val_unseen_instrs.json](https://drive.google.com/file/d/1r6-rkaj02fdVPmFdpTlVrUX9k6WECRNb/view?usp=sharing),[val_unseen_house.json](https://drive.google.com/file/d/1MtALkrfXoXug3hLNim2BUt8_CKcQbPzv/view?usp=sharing), [test_minival.json](https://drive.google.com/file/d/122EGTMa2UeGsmKXBWb7DMwOBeguhPj0d/view?usp=sharing)
 
 
 ### Important Dates
