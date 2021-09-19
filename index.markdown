@@ -27,7 +27,7 @@ The FAO dataset is provided: [train.json](https://drive.google.com/file/d/1tuS3P
 
 **July 28, 2021:** Challenge starts
 
-**September 28, 2021:** Results submission deadline
+**September 23, 2021:** Results submission deadline (**Extend to September 30, due to the update of testing dataset**)
 
 **October 8, 2021:** Paper submission deadline
 
