@@ -22,7 +22,7 @@ The ability to navigate like a human towards a language-guided target from anywh
 
 The FAO dataset is provided: [train.json](https://drive.google.com/file/d/1tuS3PFHOECwA5U-ofFyv6WZnTXoZjaBr/view?usp=sharing), [val_unseen_instrs.json](https://drive.google.com/file/d/1r6-rkaj02fdVPmFdpTlVrUX9k6WECRNb/view?usp=sharing),[val_unseen_house.json](https://drive.google.com/file/d/15Xd9DlQjWVMY-BY-jFInKF2h6syxq79e/view?usp=sharing), [test.json](https://drive.google.com/file/d/1yXKymTYkly9UMQj8v0HLv0KBkjE7vHkn/view?usp=sharing)
 
-Our technique report for this challenge is provided: 
+Our technique report for this challenge is provided: [technique_report.pdf](https://github.com/scenario-oriented-object-navigation/scenario-oriented-object-navigation.github.io/blob/master/SOON_technical_report.pdf)
 
 
 ### Important Dates
